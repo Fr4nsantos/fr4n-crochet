@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fr4n_crochet</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fffaf7;
+      margin: 0;
+      padding: 0;
+      color: #5a3e36;
+    }
+    header {
+      background-color: #f7d9cc;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 5px;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px 20px;
+      gap: 20px;
+    }
+    .produto {
+      background-color: #fff;
+      border: 1px solid #e7c8b5;
+      border-radius: 10px;
+      width: 250px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .produto img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .produto h2 {
+      font-size: 1.1em;
+      margin: 10px 0 5px;
+    }
+    footer {
+      background-color: #f7d9cc;
+      padding: 20px;
+      text-align: center;
+    }
+    .botoes a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #5a3e36;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .botoes a:hover {
+      background-color: #8c5e50;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>fr4n_crochet</h1>
+    <p>Feito à mão com amor</p>
+  </header>
+
+  <section class="catalogo">
+    <div class="produto">
+      <img src="https://via.placeholder.com/250x250.png?text=Produto+1" alt="Produto 1">
+      <h2>Blusa de Crochê</h2>
+    </div>
+    <script>
+      const nomes = [
+        "Top de Crochê", "Saia de Crochê", "Tapete Redondo", "Tapete Oval",
+        "Luva Junina", "Blusa Gola Alta", "Vestido Curto", "Cachecol",
+        "Touca Feminina", "Short de Crochê", "Bolsa Artesanal", "Kimono Leve",
+        "Conjunto de Verão", "Faixa de Cabelo", "Toalha de Mesa", "Porta-copo",
+        "Sousplat", "Amigurumi", "Cardigan Leve"
+      ];
+      const catalogo = document.querySelector('.catalogo');
+      nomes.forEach((nome, index) => {
+        const produto = document.createElement('div');
+        produto.className = 'produto';
+        produto.innerHTML = `
+          <img src="https://via.placeholder.com/250x250.png?text=Produto+${index+2}" alt="${nome}">
+          <h2>${nome}</h2>
+        `;
+        catalogo.appendChild(produto);
+      });
+    </script>
+  </section>
+
+  <footer>
+    <div class="botoes">
+      <a href="https://www.instagram.com/fr4n_crochet" target="_blank">Instagram</a>
+      <a href="https://wa.me/seunumero" target="_blank">WhatsApp</a>
+    </div>
+    <p>&copy; 2025 fr4n_crochet | Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
